@@ -1,7 +1,8 @@
                   
 body {
   margin: 0;
-  padding-top: 64px;   
+  padding-top: 64px;
+  background-color: #0d0d0f;   
 }
                   /*css nav*/
 .nav-bar {
@@ -10,7 +11,8 @@ body {
     position: fixed;
     top: 0;
     width: 100%;
-    z-index: 1000;   
+    z-index: 1000;
+    background-color: #0b0e14;   
        
     box-shadow: 0 2px 12px rgba(0,0,0,.15);
 
@@ -19,13 +21,24 @@ body {
 .nav-links {
     list-style-type: none;
     display: flex;
-    gap: 20px;
+    gap: 40px;
     align-items: center;
+    font-size: large;
 
 }
 .nav-links a{
     text-decoration: none;
+    box-sizing: border-box;
+    color: #e6edf3;
+
     
+}
+.nav-link:hover {
+    color: #a855f7;
+}
+
+.nav-link:hover::after {
+    width: 100%;
 }
                /*css hero*/
 hero{
@@ -37,7 +50,7 @@ hero{
     object-fit: cover;
     border-radius: 14px;
     display: block ;
-    opacity: 0.75;
+    opacity: 1;
     
 }
 .hero-div{
