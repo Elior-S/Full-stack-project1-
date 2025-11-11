@@ -127,7 +127,7 @@ hero{
 .back a button {
   background: #5b9cff;
   border: none;
-  color: white;
+  color: black;
   font-weight: 700;
   padding: 0.5rem 0.8rem;
   border-radius: 999px;
@@ -137,6 +137,7 @@ hero{
 .back a button:hover {
   background: #30d158;
 }
+.back 
                     /*css footer*/
  .footer {
     background: #0b0e14;
