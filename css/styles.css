@@ -1,0 +1,195 @@
+                  
+body {
+  background-color: rgb(20, 20, 79);   
+}
+
+
+               /*css hero*/
+.hero{
+    position: relative;
+    width: 100%;
+}
+.hero-image {
+    width: 100vw;
+    height: 60vh;
+    object-fit: cover;
+    border-radius: 0;
+    display: block ;
+    opacity: 1;
+    
+}
+.hero-div{
+    position: relative;
+    width: 100%;
+    margin: 0 ;
+}
+.hero-title {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%); 
+    color: white;
+    font-size: 48px;
+    text-shadow: 0px 4px 12px rgba(0, 0, 0, 0.7);
+}
+
+/*css movie gallery*/
+.movie-gallery {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    background-color:transparent;
+}
+.grid {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fill,minmax(236px,1fr));
+    justify-items: center ;
+    padding: 2rem ;
+}
+.flipcart {
+    width: 236px;
+    /*height: 350px*/ 
+    aspect-ratio: 2 / 3;
+    perspective: 1000px;
+}
+.flipper{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+
+}
+.flipcart:hover .flipper, .flipcart:focus-within .flipper {
+    
+    transform: rotateY(180deg);
+}
+.front, .back {
+    position: absolute;
+    inset: 0;
+    backface-visibility: hidden;
+    border-radius: 8px;
+    overflow: hidden;
+}
+.front img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+.front h2 {
+  position: absolute;
+  bottom: 0;
+  margin: 0;
+  padding: 0.5rem 0.6rem;
+  font-size: 1rem;
+    color: white;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.6));
+}
+
+.back {
+  background: #141a22;     
+  color: #e6edf3;
+    transform: rotateY(180deg);
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+.back h4 {
+    margin-top: 0;
+    font-size: 1.2rem;
+}
+.flipcontent span {
+  color: #9bd0ff;
+}
+.back a button {
+  background: #5b9cff;
+  border: none;
+  color: black;
+  font-weight: 700;
+  padding: 0.5rem 0.8rem;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.back a button:hover {
+  background: #30d158;
+}
+.back p {
+    font-size: 0.9rem;
+  }
+ 
+                    /*css footer*/
+ /* .footer {
+    background: linear-gradient(180deg, #0b0e14 0%, #050810 100%);
+    color:#e6edf3;
+    font-size: 0.9rem;
+    padding: 2rem 1rem;
+    margin-top: 1rem;
+    border-top: 1px solid #1b2230;
+    
+}
+
+.footer-container{
+   max-width: 1000px; 
+   margin: 0 auto; 
+   padding: 1.25rem 1rem 0.75rem;  
+  }
+.footer-columns{
+  display: flex; 
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.footer-column h4{
+  color: #a855f7; 
+  font-size: 0.95rem;
+  margin-bottom: 0.4rem;
+  font-weight: 600;
+  text-transform: uppercase;
+   letter-spacing: 0.5px;
+}
+.footer-column ul{
+  list-style: none; 
+  padding: 0; 
+  margin: 0;
+}
+
+.footer-column li{
+  margin: 0.25rem ;
+}
+.footer-column a{
+  color: #e6edf3; 
+  text-decoration: none; 
+  transition: color 0.2s ease;
+}
+.footer-column a:hover {
+  color: #9bd0ff;
+}
+.footer-bottom {
+  text-align: center;
+  border-top: 1px solid  rgba(230, 237, 243, 0.1);
+  padding-top: 0.75rem;
+  color: #9fb0c3;
+  font-size: 0.85rem;
+}
+.footer-bottom p {
+  color:#8b949e;
+  margin: 0;
+  font-size: 0.85rem;
+  line-height: 1.4;
+}
+
+.footer-bottom strong {
+  color: #a855f7;
+}
+
+.footer-bottom small {
+  font-size: 0.8rem;
+  color: #6e7681 ;
+  font-style: italic;
+} */
