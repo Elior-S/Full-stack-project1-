@@ -1,6 +1,6 @@
 body
 .movie-main {
-  /*max-width: 1100px;*/
+  max-width: 1200px;
   margin: 2rem auto;
   padding: 0 1rem;
   
@@ -8,15 +8,15 @@ body
 
 .movie-title {
   text-align: center;
-  margin-bottom: 2rem;
-  padding: 1.5rem 1rem;
+  margin-bottom: 1.5rem;
+  padding:  1rem;
   background: linear-gradient(180deg, #10172a 0%, #0b0e14 100%);
   border-radius: 12px;
 }
 
 .movie-title h3 {
   margin: 0;
-  font-size: 2.2rem;
+  font-size: 1.8rem;
   background: linear-gradient(90deg, #a855f7, #7c3aed);
   background-clip: text;
   font-weight: 700;
@@ -24,14 +24,13 @@ body
 
 .grid-movie-info {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto auto auto ;
+  grid-template-columns: 0.75fr 0.75fr;
+  grid-template-rows: auto auto  ;
   grid-template-areas: 
-    "rating poster"
     "trailer poster"
-    "reviews details"
+    "details details"
     ;
-  gap: 1.5rem;
+  gap: 0.4rem;
   align-items: start;
   margin-bottom: 0;
 }
@@ -41,23 +40,25 @@ body
   grid-area: poster;
   background: linear-gradient(180deg, #0b0e14 0%, #0a0d18 100%);
   border: 1px solid rgba(168, 85, 247, 0.3);
-  border-radius: 12px;
-  padding: 1rem;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+  border-radius: 10px;
+  padding: 0.75rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
   transition: transform 0.3s, box-shadow 0.3s;
-  height: 775px;
+  /* height: 500px; */
+  height: auto;
 }
 
 .movie-poster:hover {
   transform: translateY(-4px);
-  box-shadow: 0 12px 24px rgba(168, 85, 247, 0.25);
+  box-shadow: 0 8px 16px rgba(168, 85, 247, 0.25);
 }
 
 .movie-poster img {
   width: 100%;
-  height: 100%;
-  border-radius: 8px;
+  height: auto;
+  border-radius: 6px;
   display: block;
+  object-fit: contain;
 }
 
 /* Bande-annonce */
@@ -65,43 +66,46 @@ body
   grid-area: trailer;
   background: linear-gradient(180deg, #0b0e14 0%, #0a0d18 100%);
   border: 1px solid rgba(168, 85, 247, 0.3);
-  border-radius: 12px;
-  padding: 1rem;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+  border-radius: 10px;
+  padding: 0.75rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
   
 }
 
 .movie-trailer video,
 .movie-trailer iframe {
   width: 100%;
-  aspect-ratio: 4/3; /* vidéo plus grande */
+  aspect-ratio: 16/9; 
   height: auto;
   display: block;
   margin: 0;
   border: 0;
-  border-radius: 8px;
+  border-radius: 6px;
 }
 
 /* Zone rating */
 .movie-rating {
-  grid-area: rating;
+
   text-align: center;
-  padding: 0.5rem 0 0.8rem;
+  padding: 0;
+  margin-top: 1rem;
+  margin-bottom: 0.4rem;
 }
 
 .movie-rating h4 {
-  margin: 0 0 0.5rem;
-  font-size: 1.2rem;
+  margin: 0 0 0.4rem;
+  font-size: 1rem;
   color: #a855f7;
   font-weight: 600;
 }
 
 /* Étoiles */
 .stars {
-  direction: rtl;            /* permet de remplir de droite à gauche */
+  direction: rtl;            
   display: inline-flex;
   justify-content: center;
-  gap: 0.3rem;
+  gap: 0.25rem;
+  margin: 0;
 }
 
 .stars input {
@@ -109,7 +113,7 @@ body
 }
 
 .stars label {
-  font-size: 2rem;
+  font-size: 1.4rem;
   color: #444;
   cursor: pointer;
   transition: color 0.2s, text-shadow 0.2s;
@@ -119,13 +123,13 @@ body
 .stars label:hover,
 .stars label:hover ~ label {
   color: #a855f7;
-  text-shadow: 0 0 10px rgba(168, 85, 247, 0.6);
+  text-shadow: 0 0 8px rgba(168, 85, 247, 0.6);
 }
 
 /* Sélectionné */
 .stars input:checked ~ label {
   color: #a855f7;
-  text-shadow: 0 0 10px rgba(168, 85, 247, 0.6);
+  text-shadow: 0 0 8x rgba(168, 85, 247, 0.6);
 }
 
 /* Reviews (PDF) */
@@ -133,14 +137,14 @@ body
   grid-area: reviews;
   width: 100%;
   margin: 0;
-  border-radius: 12px;
+  border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.3);
 }
 
 .movie-reviews iframe {
   width: 100%;
-  height: 600px;
+  height: 500px;
   border: none;
   display: block;
 }
@@ -150,47 +154,84 @@ body
   grid-area: details;
   background: linear-gradient(180deg, #0b0e14 0%, #0a0d18 100%);
   border: 1px solid rgba(168, 85, 247, 0.3);
-  border-radius: 12px;
-  padding: 1.5rem 2rem;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
-  line-height: 1.7;
+  border-radius: 10px;
+  padding: 1rem 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
+  line-height: 1.6;
   color: #e6edf3;
 }
 
 .movie-details h2 {
-  margin: 0 0 1rem;
-  font-size: 1.8rem;
+  margin: 0 0 0.75rem;
+  font-size: 0.9rem;
   color: #a855f7;
   font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 .movie-details p {
   margin: 0.75rem 0;
-  font-size: 1.25rem;
+  font-size: 1.rem;
 }
 
 .movie-details strong {
   color: #9bd0ff;
   font-weight: 600;
 }
+.movie-page {
+  display: none;
+}
+
+
+.movie-page:target {
+  display: block;
+}
 
 /* Responsive */
 @media (max-width: 860px) {
   .grid-movie-info {
+    display: grid;
     grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto;
     grid-template-areas:
       "poster"
       "trailer"
-      "rating"
-      "reviews"
-      "details";
+      "details"
+      "reviews";
+    gap: 0.8rem;
   }
 
-  .movie-title h3 {
-    font-size: 1.8rem;
+  .movie-poster {
+    grid-area: poster;
+    height: auto;              /* laisse le poster prendre la bonne hauteur */
+  }
+
+  .movie-poster img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  .movie-trailer {
+    grid-area: trailer;
   }
 
   .movie-details {
-    padding: 1.25rem 1.5rem;
+    grid-area: details;
+    padding: 1rem 1.25rem;
+  }
+
+  .movie-reviews {
+    grid-area: reviews;
+  }
+
+  .movie-title h3 {
+    font-size: 1.5rem;
+  }
+
+  .movie-rating {
+    margin-top: 0.5rem;
+    margin-bottom: 0.4rem;
   }
 }

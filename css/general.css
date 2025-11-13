@@ -3,6 +3,10 @@ body {
   padding-top: 64px;
   font-family: "Segoe UI", Arial, sans-serif;
   color: #e6edf3;
+  background: linear-gradient(180deg, #26284a 0%, #1b1d33 100%);
+
+
+
 }
 .nav-bar {
     display: flex;
@@ -108,4 +112,67 @@ body {
   color: #6e7681;
   font-style: italic;
   font-size: 0.8rem;
+}
+
+
+@media (max-width: 860px) {
+
+  /* Navbar */
+  .nav-links {
+    gap: 20px;
+    font-size: 1rem;
+  }
+
+  .nav-bar {
+    padding: 0.4rem 0;
+  }
+
+  /* Footer */
+  .footer-columns {
+    gap: 2rem;
+  }
+
+  .footer-container {
+    padding: 1.5rem 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+
+  .nav-bar {
+    padding: 0.4rem 0.5rem;
+  }
+
+  .nav-links {
+    flex-direction: row;      /* IMPORTANT : on reste en ligne */
+    flex-wrap: wrap;          /* si ça ne tient pas, ça passe sur 2 lignes */
+    gap: 12px;
+    font-size: 0.9rem;
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+  }
+
+  .nav-links li {
+    margin: 0;
+  }
+
+  /* Footer */
+  .footer-columns {
+    flex-direction: column;        /* colonnes empilées */
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .footer-container {
+    padding: 1.2rem 0.8rem;
+  }
+
+  .footer-column h4 {
+    text-align: center;
+  }
+
+  .footer-bottom p {
+    font-size: 0.75rem;
+  }
 }
