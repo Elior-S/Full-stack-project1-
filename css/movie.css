@@ -28,12 +28,58 @@ body
   grid-template-rows: auto auto  ;
   grid-template-areas: 
     "trailer poster"
-    "details details"
+    "details table"
     ;
   gap: 0.4rem;
   align-items: start;
   margin-bottom: 0;
 }
+.movie-table {
+  grid-area: table;
+  margin: 0;
+  padding: 1.2rem;
+  background: linear-gradient(180deg, #0b0e14 0%, #0a0d18 100%);
+  border: 1px solid rgba(168, 85, 247, 0.35);
+  border-radius: 10px;
+
+}
+
+.movie-table h3 {
+  text-align: center;
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  color: #a855f7;
+}
+
+.movie-table table {
+  width: 100%;
+  border-collapse: collapse;
+  color: #e6edf3;
+}
+
+.movie-table th {
+  padding: 0.9rem;
+  width: 35%;
+  font-weight: 600;
+  color: #9bd0ff;
+  text-align: left;
+  background: rgba(255, 255, 255, 0.04);
+  border-bottom: 1px solid rgba(168, 85, 247, 0.2);
+}
+
+.movie-table td {
+  padding: 0.9rem;
+  background: rgba(255, 255, 255, 0.02);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  color: #d7e2f0;
+}
+
+.movie-table tr:last-child th,
+.movie-table tr:last-child td {
+  border-bottom: none;
+}
+
 
 /* Carte poster */
 .movie-poster {
@@ -157,7 +203,7 @@ body
   border-radius: 10px;
   padding: 1rem 1.5rem;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
-  line-height: 1.6;
+  line-height: 2;
   color: #e6edf3;
 }
 
@@ -198,6 +244,7 @@ body
       "poster"
       "trailer"
       "details"
+      "table"
       "reviews";
     gap: 0.8rem;
   }
