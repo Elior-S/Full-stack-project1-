@@ -115,7 +115,7 @@ body {
 }
 
 
-@media (max-width: 860px) {
+@media screen and (max-width: 860px) {
 
   /* Navbar */
   .nav-links {
@@ -137,7 +137,7 @@ body {
   }
 }
 
-@media (max-width: 600px) {
+@media screen and (max-width: 600px) {
 
   .nav-bar {
     padding: 0.4rem 0.5rem;

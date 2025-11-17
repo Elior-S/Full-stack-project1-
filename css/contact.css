@@ -83,6 +83,19 @@ textarea:focus {
   transform: scale(1.05);
   background: linear-gradient(90deg, #7c3aed, #a855f7);
 }
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 1.6rem;
+  }
+
+  .hero p {
+    font-size: 0.95rem;
+  }
+
+  .contact-form {
+    padding: 20px;
+  }
+}
 
 
 
