@@ -43,7 +43,12 @@
     font-family: 'Georgia', serif;
     animation: flicker 3s infinite;
 }
+@keyframes flicker {
 
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+    75% { opacity: 0.95; }
+}
 /* כותרות קומדיה/אקשן  */
 .comedy-section > h1 {
     color: #ff6348;
