@@ -110,7 +110,7 @@
 
 /* action specific */
 .action-block {
-    background: rgba(255, 255, 255, 0.06); /* שקוף על רקע כהה */
+    background:#2E2D30 ;
     border: 1px solid rgba(255, 120, 60, 0.12);
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
     transition: all 0.4s ease;
@@ -177,7 +177,7 @@
 
 .recommendations-comedy a {
     text-decoration: none;
-    color: #ff6f3c; 
+    color: #77341B; 
 }
 
 .recommendations-comedy a:hover {
@@ -206,7 +206,7 @@
     color: #ff0000;
 }
 
-/* RESPONSIVE */
+/* ===== RESPONSIVE ===== */
 @media screen and (max-width: 600px) {
     .comedy-section > h1,
     .horror-section > h1,
