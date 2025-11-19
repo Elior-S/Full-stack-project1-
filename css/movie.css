@@ -16,14 +16,12 @@ body .movie-main {
 .movie-title h3 {
   margin: 0;
   font-size: 1.8rem;
-  background: linear-gradient(90deg, #a855f7, #7c3aed);
-  background-clip: text;
   font-weight: 700;
 }
 
 .grid-movie-info {
   display: grid;
-  grid-template-columns: 0.75fr 0.75fr;
+  grid-template-columns: 1fr 1fr;
   grid-template-rows: auto auto  ;
   grid-template-areas: 
     "trailer poster"
@@ -120,7 +118,6 @@ body .movie-main {
 .movie-trailer video,
 .movie-trailer iframe {
   width: 100%;
-  aspect-ratio: 16/9; 
   height: auto;
   display: block;
   margin: 0;
@@ -238,7 +235,7 @@ body .movie-main {
   .grid-movie-info {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: auto auto auto auto;
+
     grid-template-areas:
       "poster"
       "trailer"

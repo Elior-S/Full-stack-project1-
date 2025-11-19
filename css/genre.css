@@ -23,7 +23,7 @@
 }
 
 .comedy-theme {
-    background: linear-gradient(135deg, #fff5a5 0%, #ffcf67 100%);
+    background: linear-gradient(135deg, #ffeaa7 0%, #fab1a0 50%,#ffeaa7 100%);
 }
 
 
@@ -103,6 +103,10 @@
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
     transition: all 0.4s ease;
 }
+.comedy-block:hover {
+    transform: translateY(-8px) scale(1.02); ;
+    
+}
 
 /* action specific */
 .action-block {
@@ -114,7 +118,7 @@
 .action-block:hover {
     transform: translateY(-8px) scale(1.02);
     box-shadow: 0 0 25px rgba(255,60,0,0.4);
-    transition: 0.3s ease;
+    
 }
 
 
@@ -181,11 +185,25 @@
     transform: translateX(5px);
 }
 
-/* footer adjustments */
-.footer-action {
-    background: rgba(40, 40, 40, 0.95);
-    border-top: 2px solid rgba(255, 80, 50, 0.3);
-    color: #ddd;
+/* footer adjustments*/
+
+.footer-action h4 {
+    color: #ffb86b;
+} 
+.footer-action a:hover {
+    color: #ffd19a;
+}
+.footer-comedy h4 {
+    color: #ff6348;
+} 
+.footer-comedy a:hover {
+    color: #ffa36c;
+}
+.footer-horror h4 {
+    color: #ff0000;
+} 
+.footer-horror a:hover {
+    color: #ff0000;
 }
 
 /* ===== RESPONSIVE ===== */
@@ -199,7 +217,7 @@
     .comedy-block img,
     .horror-block img,
     .action-block img {
-        height: 260x;
+        height: 260px;
     }
 
     .comedy-block p,
