@@ -1,4 +1,4 @@
-/* ===== SECTION LAYOUT ===== */
+/*SECTION LAYOUT*/
 .horror-section, .comedy-section, .action-section {
     max-width: 1000px;
     margin: 80px auto;
@@ -16,7 +16,7 @@
     width: 100%;
 }
 
-/* ===== THEMES ===== */
+/* THEMES */
 .horror-theme {
     background: linear-gradient(180deg, #0a0a0a 0%, #1a0000 50%, #000000 100%);
     position: relative;
@@ -76,7 +76,7 @@
 .comedy-section > p { color: #2d3436; }
 .action-section > p { color: #ddd; }
 
-/* ===== BLOCK CARDS ===== */
+/* BLOCK CARDS */
 .horror-block, .comedy-block, .action-block {
     margin-bottom: 50px;
     border-radius: 15px;
@@ -206,7 +206,7 @@
     color: #ff0000;
 }
 
-/* ===== RESPONSIVE ===== */
+/* RESPONSIVE */
 @media screen and (max-width: 600px) {
     .comedy-section > h1,
     .horror-section > h1,

@@ -247,7 +247,7 @@ body .movie-main {
 
   .movie-poster {
     grid-area: poster;
-    height: auto;              /* laisse le poster prendre la bonne hauteur */
+    height: auto;              
   }
 
   .movie-poster img {
